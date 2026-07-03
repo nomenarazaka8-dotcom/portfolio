@@ -360,6 +360,14 @@ h2 {
     max-width: 500px;
     margin: 40px auto 0;
 }
+.video-card video {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 18px;
+    box-shadow: 0 4px 16px var(--ombre);
+    border: 1px solid var(--or);
+}
 
 @media (max-width: 768px) {
     .projects-grid {
