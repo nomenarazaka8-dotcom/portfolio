@@ -269,18 +269,12 @@
         </div>
 
         <div class="card video-card">
-    <h3>📰 Vidéo Actu RH</h3>
-    <p>
-        Conception et réalisation d'une vidéo de communication interne
-        présentant les actualités RH du Groupe Basan.
-    </p>
-    <video controls preload="metadata" poster="assets/images/actu-rh-poster.png">
-        <source src="assets/video/Actu-RH.mp4" type="video/mp4">
-        Votre navigateur ne supporte pas la lecture de vidéo.
-    </video>
-</div>
+        ...
+    </div>
 
-    <section id="contact">
+</section>   <!-- ← cette ligne manquait -->
+
+<section id="contact">
         <h2>Contact</h2>
 
         <p>
@@ -314,35 +308,47 @@
 
     <!-- ===== LIGHTBOX (tout en bas, juste avant la fermeture du body) ===== -->
 
-    <div id="img1" class="lightbox">
-        <a href="#" class="close" aria-label="Fermer"></a>
-        <img src="assets/images/Noël.png" alt="Affiche fête de Noël en grand format">
-    </div>
+   <div id="img1" class="lightbox">
+    <a href="#" class="close" aria-label="Fermer"></a>
+    <a href="#img6" class="nav-arrow prev" aria-label="Image précédente">&#10094;</a>
+    <img src="assets/images/Noël.png" alt="Affiche fête de Noël en grand format">
+    <a href="#img2" class="nav-arrow next" aria-label="Image suivante">&#10095;</a>
+</div>
 
-    <div id="img2" class="lightbox">
-        <a href="#" class="close" aria-label="Fermer"></a>
-        <img src="assets/images/Team-building_RH.png" alt="Affiche team building RH en grand format">
-    </div>
+<div id="img2" class="lightbox">
+    <a href="#" class="close" aria-label="Fermer"></a>
+    <a href="#img1" class="nav-arrow prev" aria-label="Image précédente">&#10094;</a>
+    <img src="assets/images/Team-building_RH.png" alt="Affiche team building RH en grand format">
+    <a href="#img3" class="nav-arrow next" aria-label="Image suivante">&#10095;</a>
+</div>
 
-    <div id="img3" class="lightbox">
-        <a href="#" class="close" aria-label="Fermer"></a>
-        <img src="assets/images/October_rose.png" alt="Affiche October Rose en grand format">
-    </div>
+<div id="img3" class="lightbox">
+    <a href="#" class="close" aria-label="Fermer"></a>
+    <a href="#img2" class="nav-arrow prev" aria-label="Image précédente">&#10094;</a>
+    <img src="assets/images/October_rose.png" alt="Affiche October Rose en grand format">
+    <a href="#img4" class="nav-arrow next" aria-label="Image suivante">&#10095;</a>
+</div>
 
-    <div id="img4" class="lightbox">
-        <a href="#" class="close" aria-label="Fermer"></a>
-        <img src="assets/images/Graduate_Program.png" alt="Annonce Graduate Program en grand format">
-    </div>
+<div id="img4" class="lightbox">
+    <a href="#" class="close" aria-label="Fermer"></a>
+    <a href="#img3" class="nav-arrow prev" aria-label="Image précédente">&#10094;</a>
+    <img src="assets/images/Graduate_Program.png" alt="Annonce Graduate Program en grand format">
+    <a href="#img5" class="nav-arrow next" aria-label="Image suivante">&#10095;</a>
+</div>
 
-    <div id="img5" class="lightbox">
-        <a href="#" class="close" aria-label="Fermer"></a>
-        <img src="assets/images/cantine.png" alt="Affiche enquête cantine en grand format">
-    </div>
+<div id="img5" class="lightbox">
+    <a href="#" class="close" aria-label="Fermer"></a>
+    <a href="#img4" class="nav-arrow prev" aria-label="Image précédente">&#10094;</a>
+    <img src="assets/images/cantine.png" alt="Affiche enquête cantine en grand format">
+    <a href="#img6" class="nav-arrow next" aria-label="Image suivante">&#10095;</a>
+</div>
 
-    <div id="img6" class="lightbox">
-        <a href="#" class="close" aria-label="Fermer"></a>
-        <img src="assets/images/conception_t-shirt.png" alt="Conception t-shirt en grand format">
-    </div>
+<div id="img6" class="lightbox">
+    <a href="#" class="close" aria-label="Fermer"></a>
+    <a href="#img5" class="nav-arrow prev" aria-label="Image précédente">&#10094;</a>
+    <img src="assets/images/conception_t-shirt.png" alt="Conception t-shirt en grand format">
+    <a href="#img1" class="nav-arrow next" aria-label="Image suivante">&#10095;</a>
+</div>
 
     <script src="script.js"></script>
 </body>
