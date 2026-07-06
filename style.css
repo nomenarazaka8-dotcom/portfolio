@@ -545,22 +545,39 @@ footer {
 @media (max-width: 768px) {
     nav {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        overflow-x: auto;
+        white-space: nowrap;
+        justify-content: flex-start;
+        padding: 14px 16px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        transition: transform 0.3s ease;
+    }
+
+    nav::-webkit-scrollbar {
+        display: none;
     }
 
     nav a {
-        margin: 8px 0;
+        margin: 0 14px 0 0;
+        flex-shrink: 0;
     }
-    nav a.active {
-    color: var(--or-clair);
-}
 
-nav a.active::after {
-    width: 100%;
-}
+    nav.hidden {
+        transform: translateY(-100%);
+    }
+
+    nav a.active {
+        color: var(--or-clair);
+    }
+
+    nav a.active::after {
+        width: 100%;
+    }
 
     header {
-        padding: 200px 20px 60px;
+        padding: 110px 20px 60px;
     }
 
     header h1 {
@@ -579,7 +596,8 @@ nav a.active::after {
     section {
         padding: 60px 20px;
     }
-.nav-arrow {
+
+    .nav-arrow {
         width: 40px;
         height: 40px;
         font-size: 18px;
