@@ -391,10 +391,12 @@ section.visible, .card.visible, .project-card.visible {
 }
 
 /* ===== LIGHTBOX (plein écran au clic sur une carte projet) ===== */
+/* ===== LIGHTBOX AVEC DÉFILEMENT ===== */
 .lightbox {
     position: fixed;
     inset: 0;
     background: rgba(10, 10, 10, 0.96);
+    backdrop-filter: blur(6px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -404,27 +406,34 @@ section.visible, .card.visible, .project-card.visible {
     transition: opacity 0.3s ease;
 }
 
-.lightbox:target {
+.lightbox.open {
     opacity: 1;
     visibility: visible;
 }
 
-.lightbox img {
-    max-width: 88%;
-    max-height: 85%;
+.lightbox-track-wrapper {
+    width: 88%;
+    max-width: 1000px;
+    height: 85%;
+    overflow: hidden;
+}
+
+.lightbox-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+
+.lightbox-track img {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    object-fit: contain;
     border-radius: 10px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
-    border: none;
 }
 
 .lightbox .close {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-}
-
-.lightbox .close::after {
-    content: "✕";
     position: absolute;
     top: 24px;
     right: 32px;
@@ -438,18 +447,17 @@ section.visible, .card.visible, .project-card.visible {
     background: rgba(255, 255, 255, 0.12);
     border: 1px solid var(--or-clair);
     border-radius: 50%;
+    cursor: pointer;
     transition: 0.3s;
+    z-index: 2;
 }
 
-.lightbox .close:hover::after {
+.lightbox .close:hover {
     background: var(--or-clair);
     color: var(--bleu-nuit);
     transform: rotate(90deg);
 }
-.lightbox {
-    background: rgba(10, 10, 10, 0.96);
-    backdrop-filter: blur(6px);
-}
+
 .nav-arrow {
     position: absolute;
     top: 50%;
@@ -465,7 +473,7 @@ section.visible, .card.visible, .project-card.visible {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid var(--or-clair);
     border-radius: 50%;
-    text-decoration: none;
+    cursor: pointer;
     transition: 0.3s;
 }
 
@@ -474,12 +482,17 @@ section.visible, .card.visible, .project-card.visible {
     color: var(--bleu-nuit);
 }
 
-.nav-arrow.prev {
-    left: 24px;
-}
+.nav-arrow.prev { left: 24px; }
+.nav-arrow.next { right: 24px; }
 
-.nav-arrow.next {
-    right: 24px;
+@media (max-width: 768px) {
+    .nav-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+    .nav-arrow.prev { left: 10px; }
+    .nav-arrow.next { right: 10px; }
 }
 /* ===== CONTACT ===== */
 #contact p {

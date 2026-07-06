@@ -235,42 +235,39 @@
         <h2>Mes réalisations</h2>
 
         <div class="cards projects-grid">
+    <a href="#" class="project-card" data-index="0">
+        <img src="assets/images/Noël.png" alt="Affiche fête de Noël" loading="lazy">
+        <h3>Affiche - Fête de Noël</h3>
+    </a>
+    <a href="#" class="project-card" data-index="1">
+        <img src="assets/images/Team-building_RH.png" alt="Affiche team building RH" loading="lazy">
+        <h3>Team Building RH</h3>
+    </a>
+    <a href="#" class="project-card" data-index="2">
+        <img src="assets/images/October_rose.png" alt="Affiche October Rose" loading="lazy">
+        <h3>October Rose</h3>
+    </a>
+    <a href="#" class="project-card" data-index="3">
+        <img src="assets/images/Graduate_Program.png" alt="Annonce Graduate Program" loading="lazy">
+        <h3>Graduate Program</h3>
+    </a>
+    <a href="#" class="project-card" data-index="4">
+        <img src="assets/images/cantine.png" alt="Affiche enquête satisfaction cantine" loading="lazy">
+        <h3>Enquête Cantine</h3>
+    </a>
+    <a href="#" class="project-card" data-index="5">
+        <img src="assets/images/conception_t-shirt.png" alt="Conception t-shirt" loading="lazy">
+        <h3>Conception T-shirt</h3>
+    </a>
+</div>
 
-            <a href="#img1" class="project-card">
-                <img src="assets/images/Noël.png" alt="Affiche fête de Noël" loading="lazy">
-                <h3>Affiche - Fête de Noël</h3>
-            </a>
+     <div class="card video-card">
+    <h3>Vidéo de présentation</h3>
 
-            <a href="#img2" class="project-card">
-                <img src="assets/images/Team-building_RH.png" alt="Affiche team building RH" loading="lazy">
-                <h3>Team Building RH</h3>
-            </a>
-
-            <a href="#img3" class="project-card">
-                <img src="assets/images/October_rose.png" alt="Affiche October Rose" loading="lazy">
-                <h3>October Rose</h3>
-            </a>
-
-            <a href="#img4" class="project-card">
-                <img src="assets/images/Graduate_Program.png" alt="Annonce Graduate Program" loading="lazy">
-                <h3>Graduate Program</h3>
-            </a>
-
-            <a href="#img5" class="project-card">
-                <img src="assets/images/cantine.png" alt="Affiche enquête satisfaction cantine" loading="lazy">
-                <h3>Enquête Cantine</h3>
-            </a>
-
-            <a href="#img6" class="project-card">
-                <img src="assets/images/conception_t-shirt.png" alt="Conception t-shirt" loading="lazy">
-                <h3>Conception T-shirt</h3>
-            </a>
-
-        </div>
-
-        <div class="card video-card">
-        ...
-    </div>
+    <video controls preload="metadata">
+        <source src="assets/video/Actu-RH.mp4" type="video/mp4">
+    </video>
+</div>
 
 </section>   <!-- ← cette ligne manquait -->
 
@@ -308,48 +305,22 @@
 
     <!-- ===== LIGHTBOX (tout en bas, juste avant la fermeture du body) ===== -->
 
-   <div id="img1" class="lightbox">
-    <a href="#" class="close" aria-label="Fermer"></a>
-    <a href="#img6" class="nav-arrow prev" aria-label="Image précédente">&#10094;</a>
-    <img src="assets/images/Noël.png" alt="Affiche fête de Noël en grand format">
-    <a href="#img2" class="nav-arrow next" aria-label="Image suivante">&#10095;</a>
+<!-- ===== LIGHTBOX UNIQUE AVEC DÉFILEMENT ===== -->
+<div id="lightbox" class="lightbox">
+    <button class="close" aria-label="Fermer">&times;</button>
+    <button class="nav-arrow prev" aria-label="Image précédente">&#10094;</button>
+    <div class="lightbox-track-wrapper">
+        <div class="lightbox-track" id="lightboxTrack">
+            <img src="assets/images/Noël.png" alt="Affiche fête de Noël">
+            <img src="assets/images/Team-building_RH.png" alt="Affiche team building RH">
+            <img src="assets/images/October_rose.png" alt="Affiche October Rose">
+            <img src="assets/images/Graduate_Program.png" alt="Annonce Graduate Program">
+            <img src="assets/images/cantine.png" alt="Affiche enquête cantine">
+            <img src="assets/images/conception_t-shirt.png" alt="Conception t-shirt">
+        </div>
+    </div>
+    <button class="nav-arrow next" aria-label="Image suivante">&#10095;</button>
 </div>
-
-<div id="img2" class="lightbox">
-    <a href="#" class="close" aria-label="Fermer"></a>
-    <a href="#img1" class="nav-arrow prev" aria-label="Image précédente">&#10094;</a>
-    <img src="assets/images/Team-building_RH.png" alt="Affiche team building RH en grand format">
-    <a href="#img3" class="nav-arrow next" aria-label="Image suivante">&#10095;</a>
-</div>
-
-<div id="img3" class="lightbox">
-    <a href="#" class="close" aria-label="Fermer"></a>
-    <a href="#img2" class="nav-arrow prev" aria-label="Image précédente">&#10094;</a>
-    <img src="assets/images/October_rose.png" alt="Affiche October Rose en grand format">
-    <a href="#img4" class="nav-arrow next" aria-label="Image suivante">&#10095;</a>
-</div>
-
-<div id="img4" class="lightbox">
-    <a href="#" class="close" aria-label="Fermer"></a>
-    <a href="#img3" class="nav-arrow prev" aria-label="Image précédente">&#10094;</a>
-    <img src="assets/images/Graduate_Program.png" alt="Annonce Graduate Program en grand format">
-    <a href="#img5" class="nav-arrow next" aria-label="Image suivante">&#10095;</a>
-</div>
-
-<div id="img5" class="lightbox">
-    <a href="#" class="close" aria-label="Fermer"></a>
-    <a href="#img4" class="nav-arrow prev" aria-label="Image précédente">&#10094;</a>
-    <img src="assets/images/cantine.png" alt="Affiche enquête cantine en grand format">
-    <a href="#img6" class="nav-arrow next" aria-label="Image suivante">&#10095;</a>
-</div>
-
-<div id="img6" class="lightbox">
-    <a href="#" class="close" aria-label="Fermer"></a>
-    <a href="#img5" class="nav-arrow prev" aria-label="Image précédente">&#10094;</a>
-    <img src="assets/images/conception_t-shirt.png" alt="Conception t-shirt en grand format">
-    <a href="#img1" class="nav-arrow next" aria-label="Image suivante">&#10095;</a>
-</div>
-
     <script src="script.js"></script>
 </body>
 
