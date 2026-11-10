@@ -83,7 +83,7 @@ window.addEventListener('scroll', () => {
 });
 
 // ===== Effet machine à écrire sur le sous-titre du header =====
-const texte = "Étudiante en Master 2 Droit Privé | Développeuse Web Débutante";
+const texte = "Profil juridique & RH | Innovation et gestion de projets numériques";
 const element = document.querySelector('header p');
 let i = 0;
 element.textContent = '';
